@@ -49,5 +49,5 @@ jobs:
             context: .
             push: true
             tags: |
-                ${{ secrets.DOCKER_USERNAME }}/cicd-demo:latest
-                ${{ secrets.DOCKER_PASSWORD }}/cicd-demo:${{ github.sha }}
+                ovie84/cicd-demo:latest
+                ovie84/cicd-demo:${{ github.sha }}
