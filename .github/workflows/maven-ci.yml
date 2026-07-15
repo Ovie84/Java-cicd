@@ -49,5 +49,5 @@ jobs:
             context: .
             push: true
             tags: |
-                ovie84/cicd-demo:latest
-                ovie84/cicd-demo:${{ github.sha }}
+                ovie2604/cicd-demo:latest
+                ovie2604/cicd-demo:${{ github.sha }}
