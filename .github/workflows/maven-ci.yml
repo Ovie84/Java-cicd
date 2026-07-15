@@ -33,6 +33,10 @@ jobs:
             username: ${{ secrets.DOCKER_USERNAME }}
             password: ${{ secrets.DOCKER_PASSWORD }}
 
+        - name: Downcase Repository Owner Name
+          run: |
+            echo "DOCKER_USER=$(echo '${{ secrets.DOCKER_USERNAME }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
         - name: Build and Push Docker Image
           uses: docker/build-push-action@v5
           with:
